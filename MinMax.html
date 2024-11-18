@@ -1,0 +1,24 @@
+<!-- <script>
+    function MinMax(arr){
+
+        var min=Math.min(...arr);
+        var max=Math.max(...arr);
+        return [min,max];
+    }
+    console.log(MinMax([8,9,4,5]))
+</script> -->
+
+
+<script>
+    function Max(arr){
+        var max=arr[0];
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+         document.write(max)
+
+    }
+    console.log(Max([5,6,7,8,9]))
+</script>

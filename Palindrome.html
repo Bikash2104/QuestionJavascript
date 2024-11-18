@@ -1,0 +1,32 @@
+<!-- <script>
+    function Palindrome(str){
+        return str.toLowerCase()===str.toLowerCase().split('').reverse().join('');
+    }
+    console.log(Palindrome('Madam'));
+</script> -->
+
+
+<script>
+    // function Palindrome() {
+    //     var str = 
+    //     return str.toLowerCase() === str.toLocaleLowerCase().split('').reverse().join('');
+    // }
+
+    // console.log(Palindrome());
+
+    let str = prompt("Enter a name");
+    let length = str.length
+    let rev = ""
+
+    for (let i = 0; i < length; i++) {
+        rev += str[length - 1 - i];
+    }
+    if(str == rev){
+        alert(`${rev} is a palindrom`)
+    }else{
+        alert("not a palidrome")
+    }
+
+    
+
+</script>

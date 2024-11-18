@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/Styles/to-do.css">
+    
+
+
+    <title>Document</title>
+</head>
+<body>
+   
+    <input type="text" id="inp">
+    <button  onclick="AddData()">Add</button>
+ 
+    <ul>
+
+    </ul>
+  
+    <script>
+        var inp = document.getElementById('inp');
+        var ul = document.querySelector('ul')
+        function AddData() {
+            if(inp.value == ''){
+                alert('inp cant be empty')
+            } else {
+            var li = document.createElement('li');
+            li.innerHTML = `${inp.value}<span onclick='edit(this)' class='bi bi-pen-fill ms-5'></span><span onclick='remove(this)' class='bi bi-trash-fill me-3'></span>`
+            ul.appendChild(li)
+            inp.focus()
+            inp.value = ''
+            }
+        }
+        function remove(span) {
+            var li = span.parentElement;
+            ul.removeChild(li)
+        }
+
+        function edit(span) {
+            var li = span.parentElement;
+            inp.focus()
+            inp.value = li.firstChild.nodeValue;
+            var btn = document.querySelector('button');
+            btn.innerHTML = 'save'
+            btn.onclick=function() {
+                li.firstChild.nodeValue = inp.value;
+                btn.innerHTML = 'Add'
+                inp.value = ''
+            }
+        }
+
+
+    </script>
+</body>
+</html>

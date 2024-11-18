@@ -1,0 +1,17 @@
+<script>
+    function FindLarge(){
+        var NeastArray=[[2],[8,5],[5,2,4]];
+        var largest=NeastArray[0][0];
+        for(var arr of NeastArray){
+            for(var num of arr){
+                if(num>largest){
+                    largest=num;
+                }
+            }
+        }
+
+
+         document.write(largest);
+    }
+FindLarge();
+</script>

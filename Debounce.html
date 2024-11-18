@@ -1,0 +1,30 @@
+<script>
+    function f1(){
+        console.log("f1 executed");
+    }
+    function f2(){
+        console.log("f2 executed");
+    }
+    function f3(){
+        console.log("f3 executed");
+    }
+    var timer;
+    function Load(){
+        setTimeout(f1, 0);
+        setTimeout(f2, 1000);
+        setTimeout(f3, 2000);
+    }
+    Load();
+</script>
+
+<!-- <script>
+    function Debounce(Fun, time) {
+        var timer;
+        return function() {
+            timer = setTimeout(Fun, time);
+        };
+
+
+    }
+   
+</script> -->
