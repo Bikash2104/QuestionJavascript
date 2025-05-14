@@ -19,32 +19,31 @@
     console.log(secondLarge([9, 8, 7, 6, 4, 1]));
 </script> -->
 
-
 <script>
-    function findSecondLargest(arr) {
+  function findSecondLargest(arr) {
     if (arr.length < 2) {
-        throw new Error("Array must have at least two elements");
+      throw new Error("Array must have at least two elements");
     }
 
     let max = arr[0];
-    let secondMax = arr[0];
+    let secondMax = "";
 
     for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            secondMax = max;
-            max = arr[i];
-        } else if (arr[i] > secondMax && arr[i] !== max) {
-            secondMax = arr[i];
-        }
+      if (arr[i] > max) {
+        secondMax = max;
+        max = arr[i];
+      } else if (arr[i] > secondMax && arr[i] !== max) {
+        secondMax = arr[i];
+      }
     }
 
     if (secondMax === max) {
-        throw new Error("No second largest element found");
+      throw new Error("No second largest element found");
     }
 
     return secondMax;
-}
+  }
 
-const arr = [6,5,9,7,4];
-console.log(findSecondLargest(arr));
+  const arr = [6, 5, 9, 7, 4];
+  console.log(findSecondLargest(arr));
 </script>

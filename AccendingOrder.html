@@ -1,18 +1,16 @@
-<script>
+<!-- <script>
     function Accending(arr){
       return arr.sort((a,b)=>a-b)
     }
     console.log(Accending([8,7,5,6,4,3]));
     
+</script> -->
+
+<script>
+  function Smallest(arr) {
+    var Small = arr.sort((a, b) => a - b);
+
+    return Small[0];
+  }
+  console.log(Smallest([5, 6, 2, 4, 9]));
 </script>
-
-
-
-<!-- <script>
-    function Smallest(arr){
-        var Small=arr.sort((a,b)=>a-b);
-
-        return Small[1];
-    }
-    console.log(Smallest([5,6,2,4,9]));
-</script>  -->
